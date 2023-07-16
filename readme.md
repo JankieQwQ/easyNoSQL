@@ -1,4 +1,5 @@
 # easyNoSQL
+[English Version](readme_en.md)
 ![Static Badge](https://img.shields.io/badge/Database-mini-grenn)
 ![Static Badge](https://img.shields.io/badge/Powered%20by-Python-grenn)  
 easyNoSQL 是一个基于 Python 的 KV 数据库, 这是一个 JSON 格式的微型数据库.  
