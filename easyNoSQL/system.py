@@ -43,3 +43,7 @@ def writeValue(keyName,valueName) -> bool:
         return True
     else:
         raise serror.KVDataBaseError(402,"The data is not written.")
+    
+def version():
+    print('easyNoSQL - KV Database, Version: ' + easyNoSQL.system.VERTEXT)
+    
