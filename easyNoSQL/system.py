@@ -68,5 +68,5 @@ def saveDataBase(filename,password='') -> bool:
         raise serror.KVDataBaseError(403,"An error occurred manipulating the database file.")
     
 def version():
-    print('easyNoSQL - KV Database, Version: ' + easyNoSQL.system.VERTEXT)
+    print('easyNoSQL - KV Database, Version: ' + VERTEXT)
     
