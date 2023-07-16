@@ -6,6 +6,7 @@ import cryptos
 VERSION = '0.1.0'
 VERCHAR = 'Beta'
 VERTEXT = VERSION + VERCHAR
+salt    = 'salt' # You can use function: changeSalt.
 
 t = """{}"""
 flag = False
@@ -17,7 +18,7 @@ def openDatabase(filename,password='') -> bool:
     with open(filename + '.json', 'r') as f:
         t = f.read()
     if not noPassword:
-        t = cryptos.decode(password,t)
+        t = cryptos.decode(password + salt,t)
     t = json.loads(t)
     flag = True
     return True
@@ -43,6 +44,9 @@ def writeValue(keyName,valueName) -> bool:
         return True
     else:
         raise serror.KVDataBaseError(402,"The data is not written.")
+    
+def changeSalt(newSalt) -> None:
+    salt = newSalt
     
 def version():
     print('easyNoSQL - KV Database, Version: ' + easyNoSQL.system.VERTEXT)
